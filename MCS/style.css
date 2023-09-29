@@ -1,6 +1,6 @@
 html {
     background: lightgray;
-    font-family: 'Merriweather', serif;
+    font-family: 'Noto Sans', sans-serif;
     margin: 10px;
 }
 
@@ -9,6 +9,52 @@ h1 {
     color: white;
 }
 
-img {
+h2 {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+#companyimage {
     width: 400px;
 }
+
+.profileimages {
+    width: 200px;
+    border-radius: 200px;
+}
+
+form {
+    border: 2px solid white;
+    width: 500px;
+    padding: 18px;
+}
+
+.form-label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-input {
+    width: 200px;
+    height: 35px;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="submit"] {
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: white;
+    border: none;
+}
+
+td {
+    padding: 7px;
+    text-align: left;
+  }
+
