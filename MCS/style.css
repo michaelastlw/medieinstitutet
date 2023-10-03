@@ -2,6 +2,16 @@ html {
     background: lightgray;
     font-family: 'Noto Sans', sans-serif;
     margin: 10px;
+ 
+}
+header {
+    align-items: center;
+    text-align: center;
+}
+section {
+    margin: auto;
+    max-width: 35%;
+    
 }
 
 h1 {
@@ -9,6 +19,7 @@ h1 {
     color: white;
     text-align: center;
 }
+
 
 h2 {
     font-size: 23px;
