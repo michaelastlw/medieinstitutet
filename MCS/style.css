@@ -59,3 +59,7 @@ td {
     text-align: left;
   }
 
+.content {
+    margin: auto;
+    max-width: 100%;
+}
