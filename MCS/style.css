@@ -52,14 +52,10 @@ input[type="submit"] {
     font-size: 1rem;
     background: white;
     border: none;
+    cursor: pointer;
 }
 
 td {
     padding: 7px;
     text-align: left;
   }
-
-.content {
-    margin: auto;
-    max-width: 100%;
-}
