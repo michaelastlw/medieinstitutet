@@ -8,19 +8,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js"></script>
 </head>
-
-<body>
+<!--  I body laddar vi på funktionen från JS för tiden. Ska ladda så fort sidan laddas i webbläsaren-->
+<body onload="startTime()" >
     <header>
         <div class="topnav">
             <a class="active" href="#home">Home</a>
             <a href="http://michaelastlw.github.io/medieinstitutet/MCS/omoss.html">About us</a>
-
+            
         </div>
     </header>
-    <h1>DataInsight Trio</h1>
+    <h1>DataInsight Trio</h1> 
 
     <p id="intro">Vi hjälper ditt företag med dataanalys, optimering och tillväxt</p>
+    <button id="change-button" onclick="clickFunction()">Klicka här för att ändra färg</button>
     <br>
     <section>
         <img src="https://medieinstitutet.se/wp-content/uploads/2019/04/adobestock197062540-1600x932.jpeg"
@@ -82,7 +84,9 @@
     </div>
     <footer>
         <div class="footer">DataInsight Trio
-            <i class="fa fa-linkedin-square" style="font-size:24px"></i>
+            <i class="fa fa-linkedin-square" style="font-size:24px"></i>'
+            <!-- här kopplar vi JS-funktionen till vår HTML-sida med id="clock"-->
+            <div id="clock"></div>
         </div>
     </footer>
 
