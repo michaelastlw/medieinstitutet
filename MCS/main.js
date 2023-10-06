@@ -37,7 +37,7 @@ function startTime() {
  }
 
  function checkTime(i) {
-    if (i < 10) { i = "0" + i; };
+    if (i < 10) {i = "0" + i;};
     return i;
 }
       // FRÅGA DANIEL: funktionen fungerar för minutrar men ej sekunder, vi kan ej hitta fel i koden. hjälp.
