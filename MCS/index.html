@@ -68,9 +68,9 @@
             <h2>Kontakta oss:</h2>
             <p>Lämna dina kontaktuppgifter så hör en av våra konsulter av sig snarast.</p>
 
-            <form>
+            <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
                 <label for="contact-name" class="form-label">Ditt namn:</label>
-                <input id="contact-name" class="form-input" type="text" placeholder="Tolvan Tolvsson">
+                <input name="fname" id="contact-name" class="form-input" type="text" placeholder="Tolvan Tolvsson">
 
                 <label for="contact-email" class="form-label"> Din email:</label>
                 <input id="contact-email" class="form-input" type="text" placeholder="tolvan@tolvsson.se">

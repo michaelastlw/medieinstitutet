@@ -28,3 +28,10 @@ function startTime() {
       // FRÅGA DANIEL: funktionen fungerar för minutrar men ej sekunder, vi kan ej hitta fel i koden. hjälp.
     // lägger till nollor till alla nummer under 10, för sekunder och minuter
     
+    function validateForm() {
+        let x = document.forms["myForm"]["fname"].value;
+        if (x == "") {
+            alert("Namn måste var ifyllt");
+            return false;
+        }
+    }
