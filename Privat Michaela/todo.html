@@ -1,28 +1,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <script>
-        // En clickfunktion som tar värdet 
-        // i todo-input och skapa en <li> med värdet i.
-        function listAppend(){
-            let inputValue = document.querySelector("#todo-input").value;
-            console.log(inputValue);
-
-        // Ta inputValue och skapa en <li>inputValue</li>
-        // HINT: document.createElement
-       let newLi = document.createElement('li');
-       newLi.appendChild(document.createTextNode(inputValue));
-       
-       let list = document.querySelector('ul');
-       // Stoppa in newLi i list
-       list.appendChild(newLi);
-    }
-  </script>
+    <script src="main.js"></script>
 </head>
 <body>
     <!-- Detta är en kommentar -->
     <input id="todo-input" type="text" />
     <button id="todo-submit" onclick="listAppend()">Lägg till</button>
-    <ul></ul>
+    <ul>
+        <li>First item</li>
+    </ul>
 </body>
 </html>
