@@ -14,7 +14,6 @@ function startTime() {
     let s = today.getSeconds();
     m = checkTime(m);
     s = checkTime(s);
-    console.log(s);
     // Eftersom h inte kopplas till funktionen checkTime tänker vi att det inte kommer visas några nollor innan klockan 10.
     // FRÅGA DANIEL om ovan
     /*
@@ -38,12 +37,7 @@ function startTime() {
  }
 
  function checkTime(i) {
-    if (i < 10) {
-        console.log(i);
-        i = "0" + i;
-        console.log(i);
-    };
-
+    if (i < 10) { i = "0" + i; };
     return i;
 }
       // FRÅGA DANIEL: funktionen fungerar för minutrar men ej sekunder, vi kan ej hitta fel i koden. hjälp.
