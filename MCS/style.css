@@ -2,16 +2,16 @@ html {
     font-family: 'Noto Sans', sans-serif;
     margin: 10px;
     box-sizing: border-box;
-
 }
 
 body {
     background: lightgray;
 }
+
+
 *, *:before, *:after {
     box-sizing: inherit;
   }
-
 
 .column {
     float: left;
@@ -45,6 +45,9 @@ button {
   .container {
     padding: 0 16px;
   }
+  .row {
+    padding:75px;
+}
   
   .container::after, .row::after {
     content: "";
