@@ -187,3 +187,14 @@ td {
     color: white;
 }
 
+#clock {
+  display: inline-block;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+.profile {
+  max-height: 460px;
+}
