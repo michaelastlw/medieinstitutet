@@ -2,16 +2,16 @@ html {
     font-family: 'Noto Sans', sans-serif;
     margin: 10px;
     box-sizing: border-box;
-
 }
 
 body {
     background: lightgray;
 }
+
+
 *, *:before, *:after {
     box-sizing: inherit;
   }
-
 
 .column {
     float: left;
@@ -22,6 +22,9 @@ body {
 #about-title {
     color: white;
 }
+#team {
+    font-size: 36px;
+}
 button {
     display: block;
     margin: auto;
@@ -30,10 +33,17 @@ button {
     border-radius: 8px;
     
 }
+@media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
+    margin:8px;
+    
   }
 
   .about-section {
@@ -45,6 +55,10 @@ button {
   .container {
     padding: 0 16px;
   }
+  .row {
+    padding-bottom:75px;
+    
+}
   
   .container::after, .row::after {
     content: "";
@@ -171,4 +185,16 @@ td {
     width: 100%;
     background-color: rgb(30 46 95);
     color: white;
+}
+
+#clock {
+  display: inline-block;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+.profile {
+  max-height: 460px;
 }

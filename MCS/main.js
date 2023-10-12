@@ -16,7 +16,7 @@ function startTime() {
     s = checkTime(s);
     // Eftersom h inte kopplas till funktionen checkTime tänker vi att det inte kommer visas några nollor innan klockan 10.
     // FRÅGA DANIEL om ovan
-    document.getElementById('clock').innerHTML = h + ":" + m + ":" +  + s;
+    document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
     setTimeout(startTime, 1000);
     // innerHTML - FRÅGA DANIEL
  }
@@ -35,3 +35,4 @@ function startTime() {
             return false;
         }
     }
+    
