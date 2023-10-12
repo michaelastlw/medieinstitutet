@@ -34,7 +34,7 @@ function showHideImage() {
 // En funktion för att ändra bildens bredd
 function changeWidthImage() {
     const kitten = document.querySelector("img");
-    
+
     // Ändra bredden på bilden
     kitten.width = 350;
 }
@@ -52,7 +52,17 @@ function changeImageFunction() {
                 return this.src;
             },
             headLineText: "Gullig hund",
-            descriptionText: "Här är ett svartvitt porträtt på en svart hund"
+            descriptionText: "Här är ett svartvitt porträtt på en svart hund",
+            button: {
+                backgroundColor: "lightpink"
+            },
+            container: {
+                border: "3px dotted lightpink"
+            },
+            getSrcAsBackground: function() {
+                // url("hund.jpg")
+                return "url(" + this.src + ")";
+            }
         },
         {
             src: "lama.jpg",
@@ -61,7 +71,17 @@ function changeImageFunction() {
                 return this.src;
             },
             headLineText: "Fluffiga lamor ",
-            descriptionText: "Vi ser två fluffiga lamor på ett fält"
+            descriptionText: "Vi ser två fluffiga lamor på ett fält",
+            button: {
+                backgroundColor: "green"
+            },
+            container: {
+                border: "5px solid green"
+            },
+            getSrcAsBackground: function() {
+                // url("hund.jpg")
+                return "url(" + this.src + ")";
+            }
         },
         {
             src: "lamm.jpg",
@@ -70,9 +90,18 @@ function changeImageFunction() {
                 return this.src;
             },
             headLineText: "Sött lamm",
-            descriptionText: "Ett lamm i blå pyjamas"
+            descriptionText: "Ett lamm i blå pyjamas",
+            button: {
+                backgroundColor: "lightblue"
+            },
+            container: {
+                border: "3px dotted lightblue"
+            },
+            getSrcAsBackground: function() {
+                // url("hund.jpg")
+                return "url(" + this.src + ")";
+            }
         }
-
     ];
 
     // Tar ett slumpmässigt tal mellan 0 och 1, gångrar med max
@@ -90,13 +119,38 @@ function changeImageFunction() {
     kitten.alt = choosenImage.alt;
 
     // Skapa en variabel för h1 och p
-     const headline = document.getElementById("headline");
-     const description = document.getElementById("description");
+    const headline = document.getElementById("headline");
+    const description = document.getElementById("description");
 
     // Sätta texten till det valda objektets headline och description
     headline.innerText = choosenImage.headLineText;
     description.innerText = choosenImage.descriptionText;
+
+    const allButtons = document.querySelectorAll("button");
+
+    // Loopa igenom alla buttons och sätt bakgrundsfärgen
+    // till choosenImage.button.backgroundColor.
+    allButtons.forEach(function (button) {
+        button.style.backgroundColor = choosenImage.button.backgroundColor;
+    });
+    // const cointainer = document.querySelector("div");
+    // cointainer.style.border = choosenImage.container.border;
+    document.querySelector("div").style.border = choosenImage.container.border;
+
+    // Ändra bakgrunden i body-taggen till den bild vi har valt
+    const bodyElement = document.querySelector("body");
+    bodyElement.style.backgroundImage = choosenImage.getSrcAsBackground();
+
+    bodyElement.style.backgroundSize = "50%";
 }
+
+const timer = setInterval(showHideImage, 1000);
+function stopTimer() {
+    clearInterval(timer);
+}
+
+document.querySelector("#headline").addEventListener("click", stopTimer);
+
 // Koppla en eventListener till varje button
 hideButton.addEventListener("click", showHideImage);
 
