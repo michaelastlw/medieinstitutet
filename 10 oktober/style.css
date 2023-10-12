@@ -23,9 +23,8 @@ div {
     min-height: 260px;
     float: left;
 }
-/*
- Hej
-*/
+
+
 @media only screen and (max-width: 500px) {
     div {
         width: 80vw;

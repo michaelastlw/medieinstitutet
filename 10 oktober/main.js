@@ -34,12 +34,14 @@ function showHideImage() {
 // En funktion för att ändra bildens bredd
 function changeWidthImage() {
     const kitten = document.querySelector("img");
+    
     // Ändra bredden på bilden
     kitten.width = 350;
 }
 
 //En funktion som byter ut bilden
 function changeImageFunction() {
+
     // Skapa en array med object som innehåller information
     // om bildens src.
     const allImages = [
@@ -48,21 +50,27 @@ function changeImageFunction() {
             alt: "Svart hund",
             getSrc: function () {
                 return this.src;
-            }
+            },
+            headLineText: "Gullig hund",
+            descriptionText: "Här är ett svartvitt porträtt på en svart hund"
         },
         {
             src: "lama.jpg",
             alt: "Söta lamor",
             getSrc: function () {
                 return this.src;
-            }
+            },
+            headLineText: "Fluffiga lamor ",
+            descriptionText: "Vi ser två fluffiga lamor på ett fält"
         },
         {
             src: "lamm.jpg",
             alt: "Gulligt lamm",
             getSrc: function () {
                 return this.src;
-            }
+            },
+            headLineText: "Sött lamm",
+            descriptionText: "Ett lamm i blå pyjamas"
         }
 
     ];
@@ -73,12 +81,21 @@ function changeImageFunction() {
         return Math.floor(Math.random() * max);
     }
     console.log(getRandomInt(3));
+
     // Hämta en av dom på random
     const choosenImage = allImages[getRandomInt(allImages.length)];
 
     // Sätt kitten.src till den valda objectets src
     kitten.src = choosenImage.getSrc();
     kitten.alt = choosenImage.alt;
+
+    // Skapa en variabel för h1 och p
+     const headline = document.getElementById("headline");
+     const description = document.getElementById("description");
+
+    // Sätta texten till det valda objektets headline och description
+    headline.innerText = choosenImage.headLineText;
+    description.innerText = choosenImage.descriptionText;
 }
 // Koppla en eventListener till varje button
 hideButton.addEventListener("click", showHideImage);
