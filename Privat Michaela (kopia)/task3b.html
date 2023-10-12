@@ -1,0 +1,28 @@
+<!-- Skapa en funktion som tar en sträng och returnerar strängen baklänges. -->
+
+<html>
+<head>
+    <meta chartset="UTF-8">
+    <script>
+        // Skapa en funktion som delar upp en sträng i varje tecken.
+        function reverseString(originalString) {
+            // Splitta strängen till respektive tecken och stoppa in den i en array
+            let returnString = '';
+            let characters = originalString.split('');
+            // charachters = ['D','a','n','i','e','l']
+            for (let i = characters.length; i >= 0;) {
+                // +=
+                returnString += characters[i];
+            }
+
+            return returnString;
+        }
+
+        // Skapa en variabel som har datatypen sträng
+        let name = 'Michaela';
+        // Skriva ut resultatet
+        console.log(reverseString(name));
+
+    </script>
+</head>
+</html>
